@@ -21,7 +21,6 @@ Run "ng g i views/custom/sub-custom-interface" to create a new interface
 Run "ng g interceptor app" to create an interceptor
 Run "ng g guard app" to create a guard
 
-
 To delete anything you created above, please remove all file and revert the change in the app.module.ts
 
 Some changed files in the project:
