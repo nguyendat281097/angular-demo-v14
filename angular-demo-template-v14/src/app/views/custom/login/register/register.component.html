@@ -1,0 +1,80 @@
+<div class="bg-light min-vh-100 d-flex flex-row align-items-center">
+    <c-container>
+        <c-row class="justify-content-center">
+            <c-col lg="7" md="9" xl="6">
+                <c-card class="mx-4">
+                    <c-card-body class="p-4">
+                        <form cForm [formGroup]="regForm">
+                            <h1>Register</h1>
+                            <p class="text-medium-emphasis">Create your account</p>
+                            <p class="text-danger">{{message}}</p>
+                            <c-input-group class="mb-3">
+                                <span cInputGroupText>
+                                    <svg cIcon name="cilUser"></svg>
+                                </span>
+                                <input autoComplete="name" formControlName="userName" name="userName" cFormControl
+                                    placeholder="Username" />
+                            </c-input-group>
+                            <div *ngIf="regForm.get('userName')?.errors">
+                                <span class="text-danger"
+                                    *ngIf="regForm.get('userName')?.errors?.['required'] && regForm.get('userName')?.touched">Name
+                                    is required!</span>
+                                <span class="text-danger"
+                                    *ngIf="regForm.get('userName')?.errors?.['minlength'] && regForm.get('userName')?.touched">Name
+                                    is must greater than 6 character!</span>
+                            </div>
+                            <c-input-group class="mb-3">
+                                <span cInputGroupText>@</span>
+                                <input autoComplete="fullName" formControlName="fullName" name="fullName" cFormControl
+                                    placeholder="Fullname" />
+                            </c-input-group>
+                            <div *ngIf="regForm.get('userName')?.errors">
+                                <span class="text-danger"
+                                    *ngIf="regForm.get('fullName')?.errors?.['required'] && regForm.get('fullName')?.touched">Fullname
+                                    is required!</span>
+                                <span class="text-danger"
+                                    *ngIf="regForm.get('fullName')?.errors?.['minlength'] && regForm.get('fullName')?.touched">Fullname
+                                    is must greater than 6 character!</span>
+                            </div>
+                            <c-input-group class="mb-3">
+                                <span cInputGroupText>
+                                    <svg cIcon name="cilLockLocked"></svg>
+                                </span>
+                                <input autoComplete="new-password" formControlName="password" name="password"
+                                    cFormControl placeholder="Password" type="password" />
+                            </c-input-group>
+                            <div *ngIf="regForm.get('userName')?.errors">
+                                <span class="text-danger"
+                                    *ngIf="regForm.get('password')?.errors?.['required'] && regForm.get('password')?.touched">Password
+                                    is required!</span>
+                                <span class="text-danger"
+                                    *ngIf="regForm.get('password')?.errors?.['minlength'] && regForm.get('password')?.touched">Password
+                                    is must greater than 6 character!</span>
+                            </div>
+                            <c-input-group class="mb-4">
+                                <span cInputGroupText>
+                                    <svg cIcon name="cilLockLocked"></svg>
+                                </span>
+                                <input autoComplete="new-password" formControlName="rePassword" name="rePassword"
+                                    (keydown.enter)="register()" cFormControl placeholder="Repeat password"
+                                    type="password" />
+                            </c-input-group>
+                            <div *ngIf="regForm.get('userName')?.errors">
+                                <span class="text-danger"
+                                    *ngIf="regForm.get('rePassword')?.errors?.['required'] && regForm.get('rePassword')?.touched">Password
+                                    is required!</span>
+                                <span class="text-danger"
+                                    *ngIf="regForm.get('rePassword')?.errors?.['minlength'] && regForm.get('rePassword')?.touched">Password
+                                    is must greater than 6 character!</span>
+                            </div>
+                            <div class="d-grid">
+                                <button (click)="register()" [disabled]="regForm.pristine" cButton
+                                    color="success">Create Account</button>
+                            </div>
+                        </form>
+                    </c-card-body>
+                </c-card>
+            </c-col>
+        </c-row>
+    </c-container>
+</div>
