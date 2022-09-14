@@ -1,0 +1,10 @@
+1. Open Command Line or Terminal
+2. Run npm install
+3. Check the type of your database, comment and uncomment the sequelize of your database connection. Update your database info in the nodejs-express\models\DB.JS
+Uncomment the code below when the first runs npm start. It will create the new tables in the schema. (Should create a new schema before start)
+// sequelize.sync({ force: true }).then(() => {
+//     console.log('Database & tables created!');
+// });
+4. Start server with command:
+npm start
+5. Comment the code in step 3.
