@@ -35,7 +35,10 @@
               "src/assets"
             ],
             "styles": [
-              "src/scss/styles.scss"
+              "src/scss/styles.scss",
+              "node_modules/@swimlane/ngx-datatable/themes/bootstrap.scss",
+              "node_modules/@swimlane/ngx-datatable/themes/material.scss",
+              "node_modules/@swimlane/ngx-datatable/assets/icons.css"
             ],
             "scripts": [],
             "allowedCommonJsDependencies": [

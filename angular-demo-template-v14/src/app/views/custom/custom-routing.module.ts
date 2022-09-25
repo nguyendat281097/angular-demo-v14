@@ -2,12 +2,14 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { LoginComponent } from './../custom/login/login.component';
+import { CustomerTypeComponent } from './../custom/customer/customer-type/customer-type.component';
+
 
 const routes: Routes = [
   {
     path: '',
     data: {
-      title: 'Login'
+      title: 'Custom'
     },
     children: [
       {
@@ -20,6 +22,13 @@ const routes: Routes = [
         component: LoginComponent,
         data: {
           title: 'Login Page'
+        }
+      },
+      {
+        path: 'customer-type',
+        component: CustomerTypeComponent,
+        data: {
+          title: 'Customer Type Page'
         }
       },
     ]

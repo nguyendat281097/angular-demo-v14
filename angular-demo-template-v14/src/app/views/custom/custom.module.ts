@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { CustomRoutingModule } from './custom-routing.module';
-import { BadgeModule, CardModule, GridModule, ButtonModule, FormModule } from '@coreui/angular';
+import { BadgeModule, CardModule, GridModule, ButtonModule, FormModule, TableModule } from '@coreui/angular';
 
 import { SubCustomComponent } from './sub-custom/sub-custom.component';
 import { ChartjsModule } from '@coreui/angular-chartjs';
@@ -12,10 +12,12 @@ import { IconModule } from '@coreui/icons-angular';
 
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { RegisterComponent } from './login/register/register.component';
+import { CustomerTypeComponent } from './customer/customer-type/customer-type.component';
 
+import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 
 @NgModule({
-  declarations: [SubCustomComponent, LoginComponent, RegisterComponent],
+  declarations: [SubCustomComponent, LoginComponent, RegisterComponent, CustomerTypeComponent],
   imports: [
     FormsModule,
     CommonModule,
@@ -29,7 +31,9 @@ import { RegisterComponent } from './login/register/register.component';
     ButtonModule,
     IconModule,
     FormModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    TableModule,
+    NgxDatatableModule
   ]
 })
 export class CustomModule { }

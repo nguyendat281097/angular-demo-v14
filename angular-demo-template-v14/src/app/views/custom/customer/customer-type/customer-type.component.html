@@ -1,0 +1,42 @@
+<c-row ngPreserveWhitespaces>
+  <c-col xs="12">
+    <c-card class="mb-4">
+      <c-card-header>
+        <strong>Angular Table</strong> <small>Striped rows</small>
+      </c-card-header>
+      <c-card-body>
+        <ngx-datatable
+          class="bootstrap"
+          [rows]="customerTypes"
+          [columns]="columns"
+          [columnMode]="'force'"
+          [headerHeight]="50"
+          [footerHeight]="50"
+          [summaryRow]="false"
+          rowHeight="auto"
+          [externalPaging]="true"
+          [count]="page.totalRows"
+          [offset]="page.pageNumber"
+          [limit]="page.pageSize"
+          (page)="loadDatas($event)"
+        >
+        <ngx-datatable-column name="Name"></ngx-datatable-column>
+        <ngx-datatable-column name="Commission"></ngx-datatable-column>
+        <ngx-datatable-column name="Option">
+              <ng-template let-column="column" ngx-datatable-header-template></ng-template>
+              <ng-template let-row="row" ngx-datatable-cell-template>
+                      <!-- <button class="btn btn-success" (click)="openEdit($event, row.id)"><i class="fa fa-edit"></i></button> -->
+                      <button (click)="delete($event, row.id)"
+                      active="state === 'active'"
+                      color="danger"
+                      cButton
+                      class="me-1">
+                <svg cIcon name="cil-trash"></svg>
+              </button>
+              </ng-template>
+            </ngx-datatable-column>
+        </ngx-datatable>
+      </c-card-body>
+    </c-card>
+  </c-col>
+</c-row>

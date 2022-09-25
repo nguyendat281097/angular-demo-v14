@@ -35,3 +35,20 @@ app.guard.ts:			provide 4 mechanisms below:
 							CanLoad				:Decides a module to be lazy loaded
 						(Vietnamese: Cung cấp cơ chế phân quyền cho user, ví dụ trang sale thì không cần đăng nhập cũng vào được, trang admin thì phải là admin user mới vào đc.)
 						(Go parallel to app.routing.module.ts)
+
+ngx-datatable:
+	- npm i @swimlane/ngx-datatable --save
+	- add NgxDatatableModule into app/home.module.ts
+	- add CSS to angular.json
+		"node_modules/@swimlane/ngx-datatable/themes/bootstrap.scss",
+        "node_modules/@swimlane/ngx-datatable/themes/material.scss",
+        "node_modules/@swimlane/ngx-datatable/assets/icons.css",
+	- create a component and use the code in https://github.com/swimlane/ngx-datatable.git to create a new datatable
+
+alertifyjs:
+	- npm install alertifyjs --save
+	- add alertifytype.d.ts
+	- update tsconfig.json
+	- add css to custom.scss
+	- update component and use the code in https://alertifyjs.com/ to create a new alert
+

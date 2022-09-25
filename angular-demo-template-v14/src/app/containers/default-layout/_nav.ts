@@ -248,7 +248,11 @@ export const navItems: INavData[] = [
     children: [
       {
         name: 'Login',
-        url: '/login'
+        url: '/customs/login'
+      },
+      {
+        name: 'Customer Type',
+        url: '/customs/customer-type'
       }
     ]
   },
