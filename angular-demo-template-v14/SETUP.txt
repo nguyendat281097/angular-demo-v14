@@ -52,3 +52,8 @@ alertifyjs:
 	- add css to custom.scss
 	- update component and use the code in https://alertifyjs.com/ to create a new alert
 
+ngx-bootstrap: modal
+	- npm install ngx-bootstrap
+	- update custom.module.ts to add the ModalModule, BsModalService
+	- update component and use the code in https://www.tutorialspoint.com/ngx_bootstrap/ngx_bootstrap_modals.htm to create a new modal
+

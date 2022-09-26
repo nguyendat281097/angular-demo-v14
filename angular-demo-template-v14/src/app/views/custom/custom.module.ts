@@ -16,6 +16,8 @@ import { CustomerTypeComponent } from './customer/customer-type/customer-type.co
 
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 
+import { ModalModule, BsModalService } from 'ngx-bootstrap/modal';
+
 @NgModule({
   declarations: [SubCustomComponent, LoginComponent, RegisterComponent, CustomerTypeComponent],
   imports: [
@@ -33,7 +35,9 @@ import { NgxDatatableModule } from '@swimlane/ngx-datatable';
     FormModule,
     ReactiveFormsModule,
     TableModule,
-    NgxDatatableModule
-  ]
+    NgxDatatableModule,
+    ModalModule
+  ],
+  providers: [BsModalService]
 })
 export class CustomModule { }
